@@ -1,51 +1,38 @@
-/* h2{
-    position: relative;
-    display: inline-block;
-}
-
-h2::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: red;
-    height: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-} */
-
-.strike{
-    text-decoration: line-through;
-}
-
 /* App.css */
 
 .app-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
     background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
+    font-size: 2rem;
 }
 
 .task-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ddd;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .task-item h2 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #333;
 }
 
@@ -57,16 +44,18 @@ h1 {
 .buttons-container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .complete-button,
 .delete-button,
 .clear-button {
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .complete-button {
@@ -82,16 +71,91 @@ h1 {
 .clear-button {
     background-color: #f0ad4e;
     color: #fff;
+    margin-top: 20px;
 }
 
-.complete-button:hover,
-.delete-button:hover,
+.complete-button:hover {
+    background-color: #4cae4c;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
 .clear-button:hover {
-    opacity: 0.9;
+    background-color: #ec971f;
 }
 
 p {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #5cb85c;
+}
+
+/* Modal CSS */
+
+.outer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.exitButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.exitButton:hover {
+    color: #d9534f;
+}
+
+input[type="text"] {
+    width: calc(100% - 40px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button[type="submit"] {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
 }
