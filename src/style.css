@@ -1,0 +1,97 @@
+/* h2{
+    position: relative;
+    display: inline-block;
+}
+
+h2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: red;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.strike{
+    text-decoration: line-through;
+}
+
+/* App.css */
+
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.task-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.task-item h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.complete-button,
+.delete-button,
+.clear-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.complete-button {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.clear-button {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.complete-button:hover,
+.delete-button:hover,
+.clear-button:hover {
+    opacity: 0.9;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #5cb85c;
+}
